@@ -38,3 +38,8 @@ a{
 strong{
     color: yellow;
 }
+
+.back{
+    color: teal;
+    font-size: 40px;
+}
