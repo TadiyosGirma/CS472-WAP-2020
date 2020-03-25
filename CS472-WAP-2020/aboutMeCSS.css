@@ -31,11 +31,13 @@ a{
 .img1{
     height: 200px;
     width: 200px;
+    border-radius: 10%;
 }
 
 .img2{
     height: 200px;
     width: 350px;
+    border-radius: 10%;
 }
 
 strong{
