@@ -1,0 +1,51 @@
+body{
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, 'Garamond', serif;
+    background-image: url(../CS472-WAP-2020/images/silverware.jpg);
+    background-attachment: fixed;
+}
+
+
+.recList{
+    list-style: none;
+} 
+
+.comments{
+    font-style: italic;
+    background-color: #FFFFA8;
+    margin: 25pt;
+}
+
+h1{
+    color: #A4A400;
+    text-align: center;
+    background-color: #f0f0f0;
+    font-family: 'Lucida Sans Unicode', 'Helvetica', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+h2{
+    color: #A4A400;
+    background-color: #f0f0f0;
+    text-decoration: underline;
+    font-family: 'Lucida Sans Unicode', 'Helvetica', 'Arial', sans-serif;
+    font-size: 18pt;
+}
+
+a{
+    color: #A4A400;
+}
+
+footer{
+    text-align: right;
+}
+
+.copyRight{
+    font-family: monospace;
+}
+
+ul{
+    list-style: url(../CS472-WAP-2020/images/pie_icon.gif);
+}
