@@ -4,12 +4,12 @@ body{
 li{
     font-family: monospace;
     list-style: none;
-    font-size: 15pt;
+    font-size: 30pt;
 }
 
 #profilePicture{
-    height: 200pt;
-    width: 200pt;
+    height: 300pt;
+    width: 300pt;
     border-radius:50%;
 }
 
