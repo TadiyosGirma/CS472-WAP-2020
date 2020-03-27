@@ -3,6 +3,12 @@ body{
     color: #e5e2db;    
 }
 
+#mainBody{
+    width: 800px;
+    margin: auto;
+    box-shadow: 5px 10px white;
+}
+
 h1{
     color: #5dbcd2;
 }
