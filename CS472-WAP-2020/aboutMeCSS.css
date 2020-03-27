@@ -1,12 +1,16 @@
 body{
-    background-color: #595647;
+    background-color: whitesmoke;
     color: #e5e2db;    
 }
 
 #mainBody{
     width: 800px;
     margin: auto;
-    box-shadow: 5px 10px white;
+    box-shadow: 5px 10px black;
+    background-color:  #595647;
+    border-radius: 50px;
+    overflow: hidden;
+    padding-left: 10pt;
 }
 
 h1{
@@ -50,7 +54,12 @@ strong{
     color: yellow;
 }
 
-.back{
-    color: teal;
-    font-size: 40px;
+a:hover{
+    color: red;
+}
+
+#back{
+    color: yellow;
+    font-size: 20px;
+    text-align: right;
 }
