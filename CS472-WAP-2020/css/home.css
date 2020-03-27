@@ -1,0 +1,15 @@
+li{
+    font-family: monospace;
+    list-style: none;
+    font-size: 15pt;
+}
+
+#profilePicture{
+    height: 200pt;
+    width: 200pt;
+    border-radius:50%;
+}
+
+.footerDiv{
+    text-align: center;
+}
