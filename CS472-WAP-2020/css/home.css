@@ -1,3 +1,6 @@
+body{
+    background-image: url("../images/background.png");
+}
 li{
     font-family: monospace;
     list-style: none;
