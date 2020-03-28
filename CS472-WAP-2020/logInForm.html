@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./css/logInForm.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Welcome to CS472 Forms</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="logInForm.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="newProductForm.html">New Product Form</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 id="title">Login Form</h1>
+
+            <form id="logInForm" method="GET">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="emailTextField">Email Address</label>
+                        <input required id="emailTextField" type="email" placeholder="Enter Email" class="form-control">
+                        <small class="form-text text-muted">We'll never share your email with anyone else</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10 , }" for="passWordTextField">Password</label>
+                        <input required id="passWordTextField" type="password" placeholder="Password" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Website</label>
+                        <input required class="form-control" type="url" name="customerName" id="email"
+                            placeholder="Enter URL">
+                        <small class="form-text text-muted">Enter fully qualified URL</small>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" name="Check Me Out" id="checkBox"><br>
+                    </div>
+
+                    <div class="form-group">
+                        <button pattern="https?://.+" title="Include http://" id="btnSubmit" type="submit" class="btn btn-primary">Submit</button>
+                    </div> 
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+</body>
+
+</html>
