@@ -40,20 +40,25 @@
                 <fieldset>
                     <div class="form-group">
                         <label for="emailTextField">Email Address</label>
-                        <input required id="emailTextField" type="email" placeholder="Enter Email" class="form-control">
+                        <input required id="emailTextField" type="email"
+                            placeholder="Enter Email, Example:youremail@gmail.com" class="form-control">
                         <small class="form-text text-muted">We'll never share your email with anyone else</small>
                     </div>
 
                     <div class="form-group">
-                        <label pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10 , }" for="passWordTextField">Password</label>
-                        <input required id="passWordTextField" type="password" placeholder="Password" class="form-control">
+                        <label for="passWordTextField">Password</label>
+                        <input required id="passWordTextField" type="password"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" placeholder="Enter Password" class="form-control">
+                        <small class="form-text text-muted">your password should be 10 characters long with atleast one
+                            capital letter and one number</small>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Website</label>
                         <input required class="form-control" type="url" name="customerName" id="email"
                             placeholder="Enter URL">
-                        <small class="form-text text-muted">Enter fully qualified URL</small>
+                        <small class="form-text text-muted">Enter fully qualified URL,
+                            Example:https://outlook.office365.com</small>
                     </div>
 
                     <div class="form-group">
@@ -61,8 +66,9 @@
                     </div>
 
                     <div class="form-group">
-                        <button pattern="https?://.+" title="Include http://" id="btnSubmit" type="submit" class="btn btn-primary">Submit</button>
-                    </div> 
+                        <button pattern="https?://.+" title="Include http://" id="btnSubmit" type="submit"
+                            class="btn btn-primary">Submit</button>
+                    </div>
                 </fieldset>
             </form>
         </div>
