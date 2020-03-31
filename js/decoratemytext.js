@@ -1,8 +1,8 @@
-window.onload = function loader() {
+window.onload = function () {
     "use strict";
-    window.onload = function () {
-        document.getElementById("btn-decoration").onclick = changeSize;
-    }
+    document.getElementById('button').onclick = interval;
+    document.getElementById('bling').onchange = boldText;
+    alert("helloworld");
 }
 
 function interval() {
@@ -30,3 +30,4 @@ function boldText() {
 
     }
 }
+
