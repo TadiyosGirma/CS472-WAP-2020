@@ -42,11 +42,18 @@ returns true if it is a vowel, false otherwise. */
 function isVowel(str) {
     let vowelArr = ["a", "e", "i", "o", "u"];
     let toReturn = false;
-    vowelArr.forEach(function (item) {
-        if (item === str) {
+    // vowelArr.forEach(function (item) {
+    //     if (item === str) {
+    //         toReturn = true;
+    //     }
+    // });
+    // return toReturn;
+
+    for (let i = 0; i < vowelArr.length; i++) {
+        if (vowelArr[i] === str) {
             toReturn = true;
         }
-    });
+    }
     return toReturn;
 }
 // TEST CASE
@@ -64,9 +71,13 @@ Do these using Imperative programming approach (i.e. for…loop or while…loop)
 
 function sum(arr) {
     let sum = 0;
-    arr.forEach(function (item) {
-        sum += item;
-    });
+    // arr.forEach(function (item) {
+    //     sum += item;
+    // });
+    // return sum;
+    for(let i=0; i<arr.length; i++){
+        sum += arr[i];
+    }
     return sum;
 }
 
@@ -78,9 +89,13 @@ console.log("EXPECTED OUTPUT = 10 AND THE RESULT IS = " + arrSum);
 
 function multiply(arr) {
     let product = 1;
-    arr.forEach(function (item) {
-        product *= item;
-    });
+    // arr.forEach(function (item) {
+    //     product *= item;
+    // });
+    // return product;
+    for(let i=0; i<arr.length; i++){
+        product *= arr[i];
+    }
     return product;
 }
 
@@ -114,18 +129,25 @@ function findLongestWord(arr) {
 
     let longest = arr[0];
     let indexOfLongest = 0;
-    arr.forEach(function (item, index) {
-        if (item.length > longest.length) {
-            longest = arr[index];
+    // arr.forEach(function (item, index) {
+    //     if (item.length > longest.length) {
+    //         longest = arr[index];
+    //     }
+    // });
+    // return longest.length;
+
+    for(let i=0; i<arr.length; i++){
+        if(arr[i].length > longest.length){
+            longest = arr[i];
         }
-    });
-    return longest;
+    }
+    return longest.length;
 }
 // TEST CASE
 let arrOfWords = ["this", "is", "a", "test", "environment", "."]
 let longestWord = findLongestWord(arrOfWords);
 console.log("QUESTION No. 6");
-console.log("EXPECTED OUTPUT = environment AND THE RESULT IS = " + longestWord);
+console.log("EXPECTED OUTPUT = 11 AND THE RESULT IS = " + longestWord);
 
 //QUESTION
 /* 7.	Write a function filterLongWords() that takes an array of words and an integer i 
@@ -133,13 +155,15 @@ and returns a new array containing only those words that were longer than i char
 
 function filterLongWords(arr, WrodLength) {
 
-    let arrOfLongWords = [];
-    arr.forEach(function (item) {
-        if (item.length > WrodLength) {
-            arrOfLongWords.push(item);
-        }
-    });
-    return arrOfLongWords;
+    // let arrOfLongWords = [];
+    // arr.forEach(function (item) {
+    //     if (item.length > WrodLength) {
+    //         arrOfLongWords.push(item);
+    //     }
+    // });
+    // return arrOfLongWords;
+    
+    return arr.filter(str => str.length > WrodLength);
 }
 // TEST CASE
 let arrOfLongWords = ["this", "is", "a", "test", "environment", "."]
@@ -156,11 +180,13 @@ i.e. Do NOT use any explicit looping construct; instead use functional programmi
 
 function computeSumOfSquares(arr) {
 
-    let sum = 0;
-    arr.forEach(function (item) {
-        sum += Math.pow(item, 2);
-    })
-    return sum;
+    // let sum = 0;
+    // arr.forEach(function (item) {
+    //     sum += Math.pow(item, 2);
+    // })
+    // return sum;
+
+    return arr.map(n => n * n).reduce((r1, r2) => r1 + r2)
 }
 // TEST CASE
 let arrOfNumbers = [1, 2, 3];
@@ -173,13 +199,15 @@ and it finds and prints only the numbers which are odd.*/
 
 function printOddNumbersOnly(arr) {
 
-    arr.forEach(function (item) {
-        if (item % 2 > 0) {
-            console.log(item);
-        }
-    })
+    // arr.forEach(function (item) {
+    //     if (item % 2 > 0) {
+    //         console.log(item);
+    //     }
+    // })
+
+    console.log(arr.filter(n => n % 2 > 0));
 }
-let arrOfNumbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let arrOfNumbers2 = [1, 2, 3, 4, 5, 6, 7, 8];
 console.log("QUESTION No. 9");
 printOddNumbersOnly(arrOfNumbers2);
 
@@ -189,13 +217,15 @@ E.g. computeSumOfSquaresOfEvensOnly ([1,2,3,4,5]) should be computed as 22 +42 =
 
 function computeSumOfSquaresOfEvensOnly(arr) {
 
-    let sum = 0;
-    arr.forEach(function (item) {
-        if (item % 2 === 0) {
-            sum += Math.pow(item, 2);
-        }
-    });
-    return sum;
+    // let sum = 0;
+    // arr.forEach(function (item) {
+    //     if (item % 2 === 0) {
+    //         sum += Math.pow(item, 2);
+    //     }
+    // });
+    // return sum;
+
+    return arr.filter(n => n % 2 === 0).map(n => n * n).reduce((r1, r2) => r1 + r2);
 }
 let arrOfNumbers3 = [1, 2, 3, 4, 5];
 console.log("QUESTION No. 10");
@@ -207,10 +237,12 @@ console.log("EXPECTED OUTPUT = 20 AND THE RESULT IS = " + computeSumOfSquaresOfE
 i.e. Do NOT use any explicit looping construct; instead use functional programming style/approach. */
 
 function sum2(arr) {
-    let sum = arr.reduce(function (prevValue, item, i, array) {
-        return prevValue + item;
-    })
-    return sum;
+    // let sum = arr.reduce(function (prevValue, item, i, array) {
+    //     return prevValue + item;
+    // })
+    // return sum;
+
+    return arr.reduce((n1, n2) => n1 + n2);
 }
 
 // TEST CASE
@@ -220,10 +252,12 @@ console.log("QUESTION No. 11 a");
 console.log("EXPECTED OUTPUT = 10 AND THE RESULT IS = " + arrSum2);
 
 function multiply2(arr) {
-    let product = arr.reduce(function (prevValue, item, i, array) {
-        return prevValue * item;
-    })
-    return product;
+    // let product = arr.reduce(function (prevValue, item, i, array) {
+    //     return prevValue * item;
+    // })
+    // return product;
+
+    return arr.reduce((n1, n2) => n1 * n2)
 }
 
 // TEST CASE
