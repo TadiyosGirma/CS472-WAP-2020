@@ -2,7 +2,6 @@ window.onload = function () {
     "use strict";
     document.getElementById('button').onclick = interval;
     document.getElementById('bling').onchange = boldText;
-    alert("helloworld");
 }
 
 function interval() {
