@@ -35,10 +35,10 @@ console.log("-----------------")
 const employee = {
     salary: 0,
     hireDate: new Date(),
-    doJob: function(jobTitle){
-        console.log(this.name + " is a " + jobTitle + " who earns $" + this.salary); 
+    doJob: function (jobTitle) {
+        console.log(this.name + " is a " + jobTitle + " who earns $" + this.salary);
     },
-    __proto__:person
+    __proto__: person
 }
 
 
@@ -46,7 +46,7 @@ const employee = {
 const employee1 = Object.create(employee);
 employee1.setName("Ann");
 employee1.dateOfBirth = new Date(2000, 11, 10);
-employee1.salary = 249995.50 ;
+employee1.salary = 249995.50;
 
 //displaying the output
 console.log(employee1.doJob("Programmer"));
@@ -55,14 +55,17 @@ console.log(employee1.doJob("Programmer"));
 console.log("QUESTION NUMBER 3")
 console.log("-----------------")
 
-function persons (newName, birthDate) {
+function persons(newName, birthDate) {
     this.name = newName;
     this.dateOfBirth = birthDate;
-    toString = function(){
-        return "Name: " + this.name + "," + " Date of Birth: " + this.dateOfBirth;
-    }
+    // toString = function(){
+    //     return "Name: " + this.name + "," + " Date of Birth: " + this.dateOfBirth;
+    // }
 }
 
 //creating the peson Peter using constructor method
 const person2 = new persons("Peter", new Date(1985, 10, 10));
+persons.prototype.toString = function () {
+    return "Name: " + this.name + "," + " Date of Birth: " + this.dateOfBirth;
+}
 console.log(person2.toString());
